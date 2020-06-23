@@ -1,0 +1,8 @@
+# git 명령어
+변경사항이 있을때는
+git status 현재 상태를 보고
+git add . 변경된 상황인 파일을 확인하고
+git commit -m 변경된 것을 저장
+git log 추적
+
+git init
