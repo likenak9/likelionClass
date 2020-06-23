@@ -1,3 +1,4 @@
+#6/23 class
 # def endwords(a):
 #     word1 = a
 #     
@@ -18,6 +19,7 @@ if len(word1) == 3:
         
 else:
     print("3글자만 가능합니다.")
+djksjdks
 
     
 # def endwords(a):
