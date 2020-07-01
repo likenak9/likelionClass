@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>복습자료입니다.</h1>
+    <h2>로또 생성기</h2>
+    <form>
+        <input type = "submit" name = "lotto" value = "로또 번호를 생성하세요">
+    </form>
+    {% if result_lotto %}
+        <h4>결과 : {{result_lotto}}</h4>
+    {% else %}
+        <h4>버튼을 눌러주세요.</h4>
+    {% endif %}
+    <hr>
+    <hr>
+</body>
+</html>
