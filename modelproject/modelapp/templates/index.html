@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" type="text/css"/>
+</head>
+<body>
+    <h1>main page</h1>
+    <h3>Make lottery</h3>
+    <form>
+        <input type = "submit" name = "lottery" value = "make number">
+    </form>
+    {% if result_lotto %}  <!-- 파이선 함수는 항상 {%열고 닫아야 한다 -->
+        <h4>result : {{result_lotto}}</h4> <!-- 파이선 변수를 넘겨받을떄는 항상 {{열고 닫아야한다 -->
+    {% else %}
+        <h4>push button :-)</h4>
+    {%endif%}
+    <hr>
+    <hr>
+    {{all_blog}}
+    <hr>
+    <hr>
+    {% for one_blog in all_blog %}
+        <h1> title : {{one_blog.title}} </h1>
+        <h1> 내용 : {{one_blog.body}}</h1>    
+        <h1> 작성일자 : {{one_blog.created_at}}</h1>
+    {%endif%}
+</body>
+</html>
