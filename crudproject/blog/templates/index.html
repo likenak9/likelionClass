@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>crud class</h1>
+    <a href="{% url 'create_page' %}" target="_blank">블로그 글쓰기</a>
+    <hr>
+    <h3>글 list</h3>
+    {% for one_post in all_post %}
+        {{one_post.id}} - <a href="{% url 'detail' one_post.id %}">{{one_post.title}}</a> - {{one_post.nickname}} - {{one_post.created_at}}
+        <br>
+    {%endfor%}
+</body>
+</html>

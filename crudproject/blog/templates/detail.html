@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3> 상세 페이지</h3>
+    <a href="{% url 'update' one_post.id %}">
+        <h4>수정하기</h4>
+    </a>
+    <a href="{% url 'delete' one_post.id %}">
+        <h4>삭제하기</h4>
+    </a>
+    <h4>제목 : {{one_post.title}}</h4>
+    <p>내용 : {{one_post.body}}</p>
+    <strong>작성자 : {{one_post.nickname}}</strong>
+    <h5>작성 날짜 : {{one_post.created_at}}</h5>
+    <a href="{% url 'index' %}"> 메인페이지로 돌아가기 </a>
+</body>
+</html>
