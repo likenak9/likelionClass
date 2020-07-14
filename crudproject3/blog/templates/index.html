@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1> 9 week class </h1>
+    <h2> Main page </h2>
+    <a href="{% url 'create' %}">write</a>
+    <h3>--List--</h3>
+    {% for i in all_post %}
+    <p>제목 : <a href="{% url 'detail' i.id %}">{{i.title}}</a> </p>
+    {%endfor%}
+</body>
+</html>
